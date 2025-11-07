@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log(empresa)
 
 
-    let resposta = await fetch(`http://localhost:3000/consultarTodosComponente/${empresa}`, {
+    let resposta = await fetch(`/consultarTodosComponente/${empresa}`, {
         method: 'GET',
         credentials: 'include'
     });
