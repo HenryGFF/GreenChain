@@ -56,7 +56,7 @@ document.querySelector('#id-form').addEventListener('submit', async (event)=>{
         const form = document.querySelector('#id-form')
         const idExterno = form.querySelector('#id-input').value;
 
-        let resposta = await fetch(`http://localhost:3000/consultarComponente/${idExterno}`, {
+        let resposta = await fetch(`/consultarComponente/${idExterno}`, {
             method: 'GET',
             credentials: 'include'
         });
@@ -79,7 +79,7 @@ document.querySelector('#id-form').addEventListener('submit', async (event)=>{
             alert(`Erro, ${data.mensagem}`);
         }
 
-        resposta = await fetch(`http://localhost:3000/consultarHistorico/${idExterno}`, {
+        resposta = await fetch(`/consultarHistorico/${idExterno}`, {
             method: 'GET',
             credentials: 'include'
         });
