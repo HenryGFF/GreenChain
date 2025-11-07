@@ -26,7 +26,7 @@ document.querySelector('#id-form').addEventListener('submit', async (event)=>{
         const form = document.querySelector('#id-form')
         const idExterno = form.querySelector('#id-input').value;
 
-        const resposta = await fetch(`http://localhost:3000/consultarComponente/${idExterno}`, {
+        const resposta = await fetch(`/consultarComponente/${idExterno}`, {
             method: 'GET',
             credentials: 'include'
         });
@@ -94,7 +94,7 @@ document.querySelector('#atualizar-form').addEventListener('submit', async (even
         hash_anterior: null,
     }
 
-    const resposta = await fetch('http://localhost:3000/atualizacao', {
+    const resposta = await fetch('/atualizacao', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(update),
