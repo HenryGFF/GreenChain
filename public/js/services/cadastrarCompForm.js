@@ -118,7 +118,7 @@ formList.forEach((form) =>{
             };
         }
 
-        const resposta = await fetch('http://localhost:3000/cadastroComponente', {
+        const resposta = await fetch('/cadastroComponente', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(FormInput)
