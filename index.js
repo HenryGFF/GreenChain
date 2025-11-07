@@ -57,10 +57,4 @@ app.use((err, req, res, next) => {
 
 app.use(express.static('./public'));
 
-console.log("Antes do app.listen");
-
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
-
-console.log("Depois do app.listen");
+export default app;
