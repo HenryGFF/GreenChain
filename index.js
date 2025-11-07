@@ -1,5 +1,8 @@
 import express from 'express';
 import session from 'express-session';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 
 import cadastroRoute from './src/api/componenteCadastroAPI.js';
 import consultaComponenteRoute from './src/api/consultarComponenteAPI.js';
@@ -13,6 +16,9 @@ import verificarLoginRoute from './src/api/verificarLoginAPI.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 app.use(express.json());
@@ -55,6 +61,6 @@ app.use((err, req, res, next) => {
     res.status(500).json({status:'erro', mensagem:'Houve um erro interno no servidor'})
 })
 
-app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 export default app;
