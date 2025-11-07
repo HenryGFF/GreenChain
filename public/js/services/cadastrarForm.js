@@ -9,7 +9,7 @@ document.getElementById('cadastro-form').addEventListener('submit', async (event
         const telefone = document.querySelector('#telefone').value;
         const senha = document.querySelector('#senha').value;
 
-        const resposta = await fetch('http://localhost:3000/criarLogin', {
+        const resposta = await fetch('/criarLogin', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({nome, email, cnpj, endereco, telefone, senha})
