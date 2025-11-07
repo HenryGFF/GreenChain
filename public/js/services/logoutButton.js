@@ -1,5 +1,5 @@
 document.querySelector('.logout-button').addEventListener('click', async ()=>{
-    const resposta = await fetch('http://localhost:3000/logout', {
+    const resposta = await fetch('/logout', {
         method:'POST',
         credentials: 'include'
     })
