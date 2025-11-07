@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenchain - cadastro</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/listaComponente.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <img src="images/nav-logo.png" alt="Navbar logo" style="margin-right: 5px;">
+            <a href="#"><span style="color:#00ff4f;">Green</span>chain</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="consultar.html">Consultar</a></li>
+            <li><a href="cadastrar.html">Cadastrar</a></li>
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li id="painelItem"><a href="painel.html"><span style="color: #ffd000; font-weight: bold;">Painel</span></a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <hgroup>
+            <h1>Componentes cadastrados</h1>
+            <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><span style="color: #2196f3;">Início</span></a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="painel.html">Minha Conta</a>   
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Componentes cadastrados</a>
+                    </li>
+            </ul>
+        </hgroup>
+        <p>
+            Abaixo estão listados todos os componentes cadastrados e vinculados a esta conta
+        </p>
+    </header>
+
+    <main id="component-list">
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="js/services/listComponents.js"></script>
+</body>

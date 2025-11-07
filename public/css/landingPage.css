@@ -1,0 +1,93 @@
+:root{
+    --background-color-body: #f5f5f5;
+    --bg-color-special: linear-gradient(90deg, #2196f3, #0074fd);
+    --text-color-special: white;
+    --special-color: #00ff4f;
+    --special-color-2: #ffd000;
+    --special-color-3: #2196f3;
+    --background-color-nav-hover-effect: rgba(50, 50, 50, 0.3);
+    --standar-font-color: #646664;
+}
+
+#landing-banner{
+    height: 90vh;
+    width: 100vw;
+    background-image: var(--bg-color-special);
+    position: relative;
+}
+#landing-banner .div-container{
+    display: flex;
+    flex-direction: row;
+    color: var(--text-color-special);
+    justify-content: space-around;
+}
+#landing-banner #slogan{
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+#landing-banner hgroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#landing-banner #slogan h1{
+    font-size: 5rem;
+    font-weight: 900;
+}
+#landing-banner #slogan p{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.landing-main section{
+    text-align: left;
+    margin: 70px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.landing-main section:nth-child(even){
+    text-align: right;
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.landing-main section:nth-child(7){
+    text-align: center;
+}
+.landing-main h1{
+    color: var(--special-color-3);
+    font-size: 2.5em;
+}
+.landing-main p{
+    font-size: 1.4em;
+}
+
+
+@keyframes appear{
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes appear2{
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

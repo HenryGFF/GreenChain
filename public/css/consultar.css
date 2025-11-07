@@ -1,0 +1,145 @@
+:root{
+    --banner-gradient: linear-gradient(180deg, #2196f380, #0074fd33, #fbfbfb00);
+    --special-font-color: white;
+    --bg-gradient: linear-gradient(180deg, #fbfbfb00, #f5f5f5);
+    --emphasis-color: #00ff4f;
+    --secondary-bg-color: #e0e0e0;
+    --background-color-button-hover: #f5f5f5;
+    --title-color: #2196f3;
+    --standard-color: #646664;
+}
+.banner{
+    position: relative;
+    background-image: 
+        var(--banner-gradient),
+        url("../images/eTrash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    width: 100vw;
+    height: 60vh;
+    color: var(--special-font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.banner>.banner-title{
+    font-weight: 700;
+    font-size: 3em;
+}
+.banner>.banner-label{
+    font-weight: 700;
+    font-size: 1.3em;
+    margin: 0 1em;
+}
+.banner>.fading-effect{
+    position: absolute;
+    bottom: 0px;
+    background-image: var(--bg-gradient);
+    height: 15px;
+    width: 100%;
+}
+
+
+.main-consultar{
+    margin: 2em 5em;
+}
+.main-consultar header{
+    text-align: center;
+    font-size: 1.3em;
+}
+.main-consultar #id-div{
+    margin: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-consultar #id-div label{
+    font-weight: 500;
+    font-size: 1.4em;
+}
+.main-consultar #id-div input{
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: var(--secondary-bg-color);
+    width: 120%;
+}
+.main-consultar #id-div .qr{
+    width: 250px;
+    height: 250px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.main-consultar #id-div #qr-recon{
+    width: 250px;
+    height: 250px;
+}
+.main-consultar button{
+    background-color: var(--emphasis-color);
+    width: 100%;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-family: "Quicksand";
+    font-weight: 700;
+    font-size: 1.3em;
+    color: var(--special-font-color);
+    margin-top: 20px;
+}
+.main-consultar button:hover{
+    background-color: var(--background-color-button-hover);
+    border-color: var(--emphasis-color);
+    color: var(--emphasis-color);
+}
+
+.main-consultar .div-cadastro{
+    border-bottom: 2px dotted var(--secondary-bg-color);
+    font-size: 1.2em;
+    color: var(--title-color);
+    font-weight: 700;
+}
+.main-consultar .div-cadastro span{
+    color: var(--standard-color);
+}
+
+.main-consultar #div-componente{
+    margin: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.main-consultar .div-historico{
+    margin: 20px;
+    font-size: 1.1em;
+    color: var(--standard-color);
+    display: flex;
+    flex-direction: row;
+}
+.main-consultar #line:before{
+    position: relative;
+    display: block;
+    content: "";
+    left: 5%;
+    width: 1px; 
+    height: 200px;
+    background-color: #ccc;
+
+}
+.main-consultar .div-data{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-consultar .div-info{
+    flex: 2;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenchain - cadastro</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <img src="images/nav-logo.png" alt="Navbar logo" style="margin-right: 5px;">
+            <a href="#"><span style="color:#00ff4f;">Green</span>chain</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="consultar.html">Consultar</a></li>
+            <li><a href="cadastrar.html">Cadastrar</a></li>
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li id="painelItem"><a href="#"><span style="color: #ffd000; font-weight: bold;">Painel</span></a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="header-style-div">
+            <hgroup>
+                <h1> Minha Conta</h1>
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><span style="color: #2196f3;">Início</span></a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Minha Conta</a>   
+                    </li>
+                </ul>
+            </hgroup>
+            <ul>
+                <li >
+                    <span id="nome-conta">Nome</span>
+                    <span>-</span>
+                    <span id="email-conta">E-mail</span>
+                </li>
+                <li>
+                    <span id="cnpj-conta">XX.XXX.XXX/XXXX-XX</span>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <button class="logout-button">Sair da conta &larrhk;</button>
+        </div>
+    </header>
+    <main class="main-painel">
+        <div id="cadastrar-componente">
+            <img src="images/icon-cadastro.png" alt="ícone para cadastro de componentes">
+            <p>Cadastrar <br> Componente</p>
+        </div>
+        <div id="componentes-cadastrados">
+            <img src="images/icon-list.png" alt="ícone da lista de componentes cadastrados por essa conta">
+            <p>Componentes <br> Cadastrados</p>
+        </div>
+        <div id="atualizar-cadastro">
+            <img src="images/icon-update.png" alt="ícone para atualizar cadastro de componente">
+            <p>Atualizar <br> Cadastro</p>
+        </div>
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/painel.js"></script>
+    <script src="js/services/logoutButton.js"></script>
+</body>

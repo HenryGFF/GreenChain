@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenchain - consulta</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/consultar.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <img src="images/nav-logo.png" alt="Navbar logo" style="margin-right: 5px;">
+            <a href="#"><span style="color:#00ff4f;">Green</span>chain</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Consultar</a></li>
+            <li><a href="cadastrar.html">Cadastrar</a></li>
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li id="painelItem"><a href="painel.html"><span style="color: #ffd000; font-weight: bold;">Painel</span></a></li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <p class="banner-title">
+            Consulta de componentes eletrônicos
+        </p>
+        <p class="banner-label">
+            Consulte aqui componentes eletrônicos cadastrados na plataforma pelas respectivas instituições proprietárias, para assegurar a confiabilidade de peças recicladas
+        </p>
+    </div>
+    <main class="main-consultar">
+        <header>
+            <p>insira o id do componente no campo abaixo (o mesmo gerado pelo sistema após o cadastro), ou scaneie o qrcode  com sua webcam</p>
+        </header>
+        <div id="id-div">
+            <form action="" id="id-form">
+                <label for="id-input">Insira o ID</label>
+                <br>
+                <input type="text" id="id-input">
+                <br>
+                <button type="submit">Consultar</button>
+            </form>
+            <div class="qr">
+                <div id="qr-recon">
+                </div>
+                <button id="qr-button">QR code</button>
+            </div>
+        </div>
+        <div id="div-componente">
+        </div>
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/consultar.js"></script>
+    <script src="js/services/consultarForm.js"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script type="module" src="js/services/qrcode.js"></script>
+</body>
+</html>

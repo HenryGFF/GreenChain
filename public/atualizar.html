@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenchain - cadastro</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/atualizar.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <img src="images/nav-logo.png" alt="Navbar logo" style="margin-right: 5px;">
+            <a href="#"><span style="color:#00ff4f;">Green</span>chain</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="consultar.html">Consultar</a></li>
+            <li><a href="cadastrar.html">Cadastrar</a></li>
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li id="painelItem"><a href="painel.html"><span style="color: #ffd000; font-weight: bold;">Painel</span></a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <hgroup>
+            <h1>Atualizando Cadastro de Componente</h1>
+            <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><span style="color: #2196f3;">Início</span></a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="painel.html">Minha Conta</a>   
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Atualizar Cadastro de Componente</a>
+                    </li>
+            </ul>
+        </hgroup>
+        <p>
+            Preencha um dos formulários abaixo para cadastrar um componeante. Clique na opção “Componente Novo” para cadasatrar um componente recém-fabricado, garantindo o registro de seu histórico duante sua circulação. Clique na opção “Componente Reciclado”, para cadastrar um componente reciclado e usado, mas ainda não cadastrado na plataforma.
+        </p>
+    </header>
+
+    <main class="main-atualizar">
+        <div id="action-div">
+            <div>
+                <form action="" id="id-form">
+                    <div>
+                        <label for="id-input">Insira o ID</label>
+                        <br>
+                        <input type="text" id="id-input">
+                        <br>
+                        <button type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <form action="" id="atualizar-form" style="display: none;">
+                    <div>
+                        <label for="descricao-input">
+                            Alterar a descrição técnica:
+                        </label>
+                        <select id="descricao" form="atualizar-form" class="customSelect" required>
+                            <option value="null" selected>--Não Alterar--</option>
+                            <option value="custom-option">
+                                --Alterar--
+                            </option>
+                        </select>
+                        <br>
+                        <textarea id="descricao-input" rows="5" cols="50" placeholder="Descrição técnica do componente..." style="display: none;"></textarea>
+                    </div>
+                    <div>
+                        <label for="observacoes-input">
+                            Alterar observações:
+                        </label>
+                        <select id="observacoes" form="atualizar-form" class="customSelect" required>
+                            <option value="null" selected>--Não Alterar--</option>
+                            <option value="custom-option">
+                                --Alterar--
+                            </option>
+                        </select>
+                        <br>
+                        <textarea id="observacoes-input"  rows="5" cols="50" placeholder="Observações a respeito do componente, testes, etc, ..." style="display: none;"></textarea>
+                    </div>
+                    <div>
+                        <label for="estado-input">
+                            Alterar o estado produto:
+                        </label>
+                        <select id="estado" form="estado-input" required>
+                            <option value="null" selected>--Não Alterar--</option>
+                            <option value="Íntegro, sem danos">
+                                Íntegro, sem danos
+                            </option>
+                            <option value="Levemente danificado">
+                                Levemente danificado
+                            </option>
+                            <option value="Gravemente danificado">
+                                Gravemente danificado
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="status-input">Alterar status do produto</label>
+                        <select id="status" form="atualizar-form" required>
+                            <option value="null" selected>--Não Alterar--</option>
+                            <option value="Componente destinado ao reuso">
+                                Reuso
+                            </option>
+                            <option value="Disponível para venda">
+                                Venda
+                            </option>                            
+                            <option value="Componente vendido">
+                                Vendido
+                            </option>
+                            <option value="Disponível para doação">
+                                Doação
+                            </option>
+                            <option value="Componente doado">
+                                Doado
+                            </option>
+                            <option value="Componente destinado à desmontagem">
+                                Desmontagem
+                            </option>
+                            <option value="Componente reciclado">
+                                Reciclado
+                            </option>
+                        </select>
+                        <br>
+                        <input type="text" id="status-input" style="display: none;">
+                    </div>
+                    <div>
+                        <label for="detalhes-input">
+                            Inserir detalhes:
+                        </label>
+                        <select id="detalhes" class="customSelect" form="atualizar-form" required>
+                            <option value="null" selected>--Não inserir--</option>
+                            <option value="custom-option">
+                                --Inserir--
+                            </option>
+                        </select>
+                        <br>
+                        <textarea id="detalhes-input" rows="5" cols="50" placeholder="Insira os detalhes sobre o destino do componente..." style="display: none;"></textarea>
+                    </div>
+                    <button type="submit">Concluir Alterações</button>
+                </form>
+            </div>
+        </div>
+        <div id="componente-info-div" style="display: none;">
+            <p id="categoria">Categoria: <br> <span class="componente-info"></span></p>
+            <p id="marca">Marca: <br> <span class="componente-info"></span></p>
+            <p id="modelo">Modelo: <br> <span class="componente-info"></span></p>
+            <p id="numero_serie">Número de série: <br> <span class="componente-info"></span></p>
+            <p id="data_fabricacao">Data de fabricação: <br> <span class="componente-info"></span></p>
+            <p id="estado">Estado: <br> <span class="componente-info"></span></p>
+            <p id="origem">Origem: <br> <span class="componente-info"></span></p>
+            <p id="descricao_tecnica">Descrição técnica/observações: <br> <span class="componente-info"></span></p>
+            <p id="status">Status: <br> <span class="componente-info"></span></p>
+        </div>
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/atualizar.js"></script>
+    <script src="js/services/atualizarForm.js"></script>
+</body>

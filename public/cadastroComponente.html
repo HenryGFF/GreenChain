@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenchain - cadastro</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastroComponente.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <img src="images/nav-logo.png" alt="Navbar logo" style="margin-right: 5px;">
+            <a href="#"><span style="color:#00ff4f;">Green</span>chain</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="consultar.html">Consultar</a></li>
+            <li><a href="cadastrar.html">Cadastrar</a></li>
+            <li id="loginItem"><a href="login.html">Login</a></li>
+            <li id="painelItem"><a href="painel.html"><span style="color: #ffd000; font-weight: bold;">Painel</span></a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <hgroup>
+            <h1>Criando Cadastro de Componente</h1>
+            <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><span style="color: #2196f3;">Início</span></a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="painel.html">Minha Conta</a>   
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Cadastro de Componente</a>
+                    </li>
+                </ul>
+        </hgroup>
+        <p>
+            Preencha um dos formulários abaixo para cadastrar um componeante. Clique na opção “Componente Novo” para cadasatrar um componente recém-fabricado, garantindo o registro de seu histórico duante sua circulação. Clique na opção “Componente Reciclado”, para cadastrar um componente reciclado e usado, mas ainda não cadastrado na plataforma.
+        </p>
+    </header>
+
+    <main class="main-cadastro">
+        <div class="options">
+            <div class="div-option">
+                <input type="radio" value="option-A" name="option" class="option-radio" id="cadastro-componente-novo">
+                <label for="cadastro-componente-novo">Componente novo</label>
+                <p>
+                    Selecione esta opção para cadastrar componentes eletrônicos novos, recém fabricados e ainda não descartados
+                </p>
+            </div>
+            <div class="div-option">
+                <input type="radio" value="option-B" name="option" class="option-radio" id="cadastro-componente-reciclado">
+                <label for="cadastro-componente-reciclado">Componente Reciclado</label>
+                <p>
+                    Selecione esta opção para cadastrar componentes usados e/ou já descartados e que são destinados à reciclagem
+                </p>
+            </div>
+        </div>
+        <div class="forms-cadastro">
+            <form action="" id="cadastro_componente_novo" style="display: none;">
+                <div class="form-style-div">
+                    <div class="form-div form-select categoria">
+                        <label for="categorias">Categoria do componente:</label>
+                        <br>
+                        <select id="categorias" form="cadastro_componente_novo" required>
+                            <option value="null" selected disabled>--Selecione uma categoria--</option>
+                            <option value="Placa-mãe">Placa-Mãe</option>
+                            <option value="CPU">Processador/CPU</option>
+                            <option value="GPU">Placa de Video/GPU</option>
+                            <option value="Placa de Rede">Placa de Rede</option>
+                            <option value="Fonte">Fonte</option>
+                            <option value="Fan">Ventoinha</option>
+                            <option value="Cooler">CPU Cooler</option>
+                            <option value="Periférico">Periférico</option>
+                        </select>
+                    </div>
+                    <div class="form-div form-text marca-nome">
+                        <label for="marca">Marca do componente:</label>
+                        <br>
+                        <input type="text" id="marca">
+                    </div>
+                    <div class="form-div form-text modelo-nome">
+                        <label for="modelo">Modelo do componente:</label>
+                        <br>
+                        <input type="text" id="modelo">
+                    </div>
+                    <div class="form-div form-text numero-serie">
+                        <label for="numero-serie">Número de série:</label>
+                        <br>
+                        <input type="text" id="numero-serie">
+                    </div>
+                    <div class="form-div form-date data-fabricacao">
+                        <label for="data-fabricacao">Data de fabricação:</label>
+                        <br>
+                        <input type="date" id="data-fabricacao">
+                    </div>
+                    <div class="form-div form-select estado">
+                        <label for="estado">Estado atual:</label>
+                        <br>
+                        <select id="estado" form="cadastro_componente" required>
+                            <option value="null" selected disabled>--Selecionar--</option>
+                            <option value="Íntegro, sem danos">
+                                Íntegro, sem danos
+                            </option>
+                            <option value="Levemente danificado">
+                                Levemente danificado
+                            </option>
+                            <option value="Gravemente danificado">
+                                Gravemente danificado
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-div form-select status">
+                        <label for="status">Destino do componente:</label>
+                        <br>
+                        <select id="status" form="cadastro_componente" required>
+                            <option value="null" selected disabled>--Selecionar--</option>
+                            <option value="Disponível para venda">
+                                Venda
+                            </option>
+                            <option value="Destinado à doação">
+                                Doação
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-div form-text descricao-tecnica">
+                    <label for="descricao-tecnica">Descrição técnica:</label>
+                    <br>
+                    <textarea id="descricao-tecnica" rows="5" cols="50" placeholder="Descrição técnica do componente..."></textarea>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <br>
+            <form action="" id="cadastro_componente_reciclado" style="display: none;">
+                <div class="form-style-div">
+                    <div class="form-div form-select categoria">
+                        <label for="categorias-Rec">Categoria do componente:</label>
+                        <br>
+                        <select id="categorias-Rec" form="cadastro_componente_reciclado" required>
+                            <option value="null" selected disabled>--Selecione uma categoria--</option>
+                            <option value="Placa-mãe">Placa-Mãe</option>
+                            <option value="CPU">Processador/CPU</option>
+                            <option value="GPU">Placa de Video/GPU</option>
+                            <option value="Placa de Rede">Placa de Rede</option>
+                            <option value="Fonte">Fonte</option>
+                            <option value="Fan">Ventoinha</option>
+                            <option value="Cooler">CPU Cooler</option>
+                            <option value="Periférico">Periférico</option>
+                        </select>
+                    </div>
+                    <div class="form-div form-text marca-nome custom">
+                        <label for="marca-Rec">Marca do componente:</label>
+                        <br>
+                        <select class="custom-select" id="marca-Rec" form="cadastro_componente" required>
+                            <option value="unknown" selected>
+                                Não conhecido/Não visível
+                            </option>
+                            <option value="custom-option" class="custom-option">
+                                --Inserir--
+                            </option>
+                        </select>
+                        <br>
+                        <input type="text" class="custom-input" id="marca-Rec-text" placeholder="--Marca do componente--" style="visibility: hidden;">
+                    </div>
+                    <div class="form-div form-text modelo-nome custom">
+                        <label for="modelo-Rec">Modelo do componente:</label>
+                        <br>
+                        <select class="custom-select" id="modelo-Rec" form="cadastro_componente" required>
+                            <option value="unknown" selected>
+                                Não conhecido/Não visível
+                            </option>
+                            <option value="custom-option" class="custom-option">
+                                --Inserir--
+                            </option>
+                        </select>
+                        <br>
+                        <input type="text" class="custom-input" id="modelo-Rec-text" placeholder="--Modelo do compoente--" style="visibility: hidden;">
+                    </div>
+                    <div class="form-div form-text numero-serie custom">
+                        <label for="numero-serie-Rec">Número de série:</label>
+                        <br>
+                        <select class="custom-select" id="numero-serie-Rec" form="cadastro_componente" required>
+                            <option value="unknown" selected>
+                                Não conhecido/Não visível
+                            </option>
+                            <option value="custom-option" class="custom-option">
+                                --Inserir--
+                            </option>
+                        </select>
+                        <br>
+                        <input type="text" class="custom-input" id="numero-serie-Rec-text" placeholder="--número de série--" style="visibility: hidden;">
+                    </div>
+                    <div class="form-div form-number ano-fabricacao">
+                        <label for="ano-fabricacao">
+                            Ano de fabricação
+                        </label>
+                        <br>
+                        <input type="number" id="ano-fabricacao" placeholder="(aproximado)">
+                    </div>
+                    <div class="form-div form-select estado">
+                        <label for="estado-Rec">Estado atual:</label>
+                        <br>
+                        <select id="estado-Rec" form="cadastro_componente" required>
+                            <option value="null" selected disabled>--Selecionar--</option>
+                            <option value="Integro, sem danos">
+                                Integro, sem danos
+                            </option>
+                            <option value="Levemente danificado">
+                                Levemente danificado
+                            </option>
+                            <option value="Gravemente danificado">
+                                Gravemente danificado
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-div form-select status">
+                        <label for="status-Rec">Destino do componente:</label>
+                        <br>
+                        <select id="status-Rec" form="cadastro_componente" required>
+                            <option value="null" selected disabled>--Selecionar--</option>
+                            <option value="Destinado à reuso">
+                                Reuso
+                            </option>
+                            <option value="Disponível para venda">
+                                Venda
+                            </option>
+                            <option value="Disponível para doação">
+                                Doação
+                            </option>
+                            <option value="Destinado à desmontagem">
+                                Desmontagem
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-div form-text origem">
+                    <label for="origem">Origem do componente a ser reciclado:</label>
+                    <br>
+                    <textarea id="origem" rows="5" cols="50" placeholder="Descreva a origem do componente reciclado..."></textarea>
+                </div>
+                <div class="form-div form-text descricao-tecnica">
+                    <label for="descricao-tecnica-Rec">Descrição técnica:</label>
+                    <br>
+                    <textarea id="descricao-tecnica-Rec" rows="5" cols="50" placeholder="Descrição técnica do componente, testes, observações..."></textarea>
+                </div>
+                <div class="form-div form-text observacoes">
+                    <label for="observacoes">Observações:</label>
+                    <br>
+                    <textarea id="observacoes" rows="5" cols="50" placeholder="Descrição técnica do componente, testes, observações..."></textarea>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="qr-field" style="display: none;">
+        <div id="qr-code">
+        </div>
+        <p id="id-gerado">
+        </p>
+        <button id="print">Imprimir</button>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/cadastroComponente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="js/services/cadastrarCompForm.js"></script>
+</body>
+</html>

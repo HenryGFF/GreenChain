@@ -1,0 +1,57 @@
+:root{
+    --background-color-main: linear-gradient(90deg, #2196f3, #0074fd);
+    --standard-font-color: white;
+    --secondary-color: #00ff4f;
+    --hover-button-color: rgba(0, 0, 0, 0.1);
+    --bg-color-div: #e0e0e0;
+}
+
+.main-login{
+    margin: 0;
+    background: var(--background-color-main);
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-login form{
+    z-index: 2;
+}
+
+.main-login form label{
+    color: var(--standard-font-color);
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.main-login form input{
+    outline: none;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-family: "Quicksand";
+    width: 100%;
+}
+.main-login form>div{
+    margin: 20px;
+    width: 100%;
+}
+
+.main-login form>button{
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-family: "Quicksand";
+    font-weight: 700;
+    font-size: 1.3em;
+    color: var(--standard-font-color);
+    margin: 20px;
+}
+.main-login form>button:hover{
+    background-color: var(--hover-button-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
