@@ -12,7 +12,7 @@ import logoutRoute from './src/api/logout.js';
 import verificarLoginRoute from './src/api/verificarLoginAPI.js';
 
 const app = express();
-const PORT = 3000
+const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
