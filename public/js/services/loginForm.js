@@ -5,7 +5,7 @@ document.getElementById('login-form').addEventListener('submit', async (event)=>
         const email = document.querySelector('#email').value;
         const senha = document.querySelector('#senha').value;
 
-        const resposta = await fetch('http://localhost:3000/login', {
+        const resposta = await fetch('/login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, senha}),
